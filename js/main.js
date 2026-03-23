@@ -486,24 +486,8 @@ $row.on('click', '.view-detail', function() {
                                 <div class="loading-text">Loading 3d Model ...</div>
                             </div>
                         </div>
-                        <model-viewer 
-                            id="model3d"
-                            src="${glb}"
-                            alt="3d Model"
-                            ar-modes="webxr scene-viewer quick-look"
-                            environment-image="neutral"
-                            auto-rotate
-                            camera-controls
-                            interaction-prompt="none"
-                            shadow-intensity="1"
-                            exposure="1"
-                            shadow-softness="1"
-                            min-camera-orbit="auto auto 5%"
-                            max-camera-orbit="auto auto 200%"
-                            camera-orbit="0deg 75deg 105%"
-                            field-of-view="30deg"
-                            style="width: 100%; height: 100%;">
-                        </model-viewer>
+                        <model-viewer src="P2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
+
                     </div>
                 </div>
             </div>
