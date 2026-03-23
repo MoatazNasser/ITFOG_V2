@@ -473,6 +473,8 @@ $row.on('click', '.view-detail', function() {
     $('#productModal .modal-title').text(name);
 
     // update modal body
+    // to get the right glb modal-viewer drag here then copy the text 
+    // https://modelviewer.dev/editor/
     $('#modalBodyContent').html(`
         <div class="text-center container-fluid">
             <div class="productModalContainer row g-0 bg- warning d-flex justify-content-center">
@@ -485,8 +487,25 @@ $row.on('click', '.view-detail', function() {
                                 <div class="spinner"></div>
                                 <div class="loading-text">Loading 3d Model ...</div>
                             </div>
-                        </div>   
-                        <model-viewer src="${glb}" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
+                        </div>
+                        
+                        
+                        <model-viewer src="${glb}" 
+ar
+ar-modes="webxr scene-viewer quick-look" 
+camera-controls 
+tone-mapping="neutral" 
+poster="poster.webp" 
+shadow-intensity="1"
+interaction-prompt="none"
+min-camera-orbit="auto auto 5%"
+max-camera-orbit="auto auto 200%"
+camera-orbit="0deg 75deg 105%"
+field-of-view="30deg"
+auto-rotate> </model-viewer>
+
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -515,15 +534,15 @@ $('#productModal').on('shown.bs.modal', function () {
     const modelContainer = document.querySelector('#modelContainer');
     const rotateBtn = document.querySelector('#rotateBtn');
     const loadingOverlay = document.querySelector('#loadingOverlay');
-    // setTimeout(() => {
-    //             loadingOverlay.classList.add('hidden');
-    //         }, 500);
+    setTimeout(() => {
+                loadingOverlay.classList.add('hidden');
+            }, 500);
     if (modelViewer) {
         modelViewer.addEventListener('load', function() {
             console.log('Model Loading done!');
-             setTimeout(() => {
-                 loadingOverlay.classList.add('hidden');
-             }, 500);
+            // setTimeout(() => {
+            //     loadingOverlay.classList.add('hidden');
+            // }, 500);
         });
 
         modelViewer.addEventListener('error', function(event) {
@@ -801,6 +820,22 @@ $(document).ready(function() {
 //                             field-of-view="30deg"
 //                             style="width: 100%; height: 100%;">
 //                         </model-viewer>
+
+
+// <model-viewer src="${glb}" 
+// ar
+// ar-modes="webxr scene-viewer quick-look" 
+// camera-controls 
+// tone-mapping="neutral" 
+// poster="poster.webp" 
+// shadow-intensity="1"
+// interaction-prompt="none"
+// min-camera-orbit="auto auto 5%"
+// max-camera-orbit="auto auto 200%"
+// camera-orbit="0deg 75deg 105%"
+// field-of-view="30deg"
+// auto-rotate> </model-viewer>
+
 
 // to get the right glb modal-viewer drag here then copy the text 
 // https://modelviewer.dev/editor/
