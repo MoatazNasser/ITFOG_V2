@@ -490,7 +490,7 @@ $row.on('click', '.view-detail', function() {
                         </div>
                         
                         
-                        <model-viewer src="${glb}"auto-rotate ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
+                        <model-viewer src="${glb}" auto-rotate ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
 
                         
                         
