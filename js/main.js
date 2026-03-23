@@ -490,19 +490,7 @@ $row.on('click', '.view-detail', function() {
                         </div>
                         
                         
-                        <model-viewer src="${glb}" 
-ar
-ar-modes="webxr scene-viewer quick-look" 
-camera-controls 
-tone-mapping="neutral" 
-poster="poster.webp" 
-shadow-intensity="1"
-interaction-prompt="none"
-min-camera-orbit="auto auto 5%"
-max-camera-orbit="auto auto 200%"
-camera-orbit="0deg 75deg 105%"
-field-of-view="30deg"
-auto-rotate> </model-viewer>
+                        <model-viewer src="${glb}"auto-rotate ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
 
                         
                         
@@ -510,10 +498,10 @@ auto-rotate> </model-viewer>
                 </div>
             </div>
         </div>
-        <div id="resetAllBtn" class="text-center container-fluid">
+        <!--<div id="resetAllBtn" class="text-center container-fluid">
             <div class="productModalreset3d row p-2 my-2 g-0 bg- warning d-flex justify-content-center">
                 <span><i class="fa-solid fa-arrow-rotate-right fa-spin"></i> Reset 3d Model Position</span>
-            </div>
+            </div> -->
         </div>
         <div class="text-center container-fluid">
             <div class="productModalText row p-3 my-2 g-0 bg- warning d-flex justify-content-center">
@@ -820,22 +808,6 @@ $(document).ready(function() {
 //                             field-of-view="30deg"
 //                             style="width: 100%; height: 100%;">
 //                         </model-viewer>
-
-
-// <model-viewer src="${glb}" 
-// ar
-// ar-modes="webxr scene-viewer quick-look" 
-// camera-controls 
-// tone-mapping="neutral" 
-// poster="poster.webp" 
-// shadow-intensity="1"
-// interaction-prompt="none"
-// min-camera-orbit="auto auto 5%"
-// max-camera-orbit="auto auto 200%"
-// camera-orbit="0deg 75deg 105%"
-// field-of-view="30deg"
-// auto-rotate> </model-viewer>
-
 
 // to get the right glb modal-viewer drag here then copy the text 
 // https://modelviewer.dev/editor/
