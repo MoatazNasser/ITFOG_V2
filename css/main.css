@@ -116,12 +116,38 @@ transform: translateX(0);
 .captionLogo{
     width: 100%;
     height: 200px;
+    margin-top: 200px;
     /* background-color: brown; */
     /* text-align: center; */
     /* font-size: x-large; */
     /* font-weight: 900; */
     /* text-shadow: 2px 2px 3px  white; */
     position: relative;
+}
+
+@media screen and (min-width: 200px)  {
+.captionLogo{
+    margin-top: 120px;
+}
+}
+@media screen and (min-width: 480px)  {
+.captionLogo{
+    margin-top: 190px;
+}
+}
+
+@media screen and (min-width: 768px) {
+.captionLogo{
+    margin-top: 200px;
+}
+}
+@media screen and (min-width: 992px) {
+.captionLogo{
+    margin-top: 250px;
+}
+}
+.appDataTitle{
+  border-bottom: 2px solid var(--ired);
 }
 .captionLogo::after{
  content: "";
@@ -353,8 +379,8 @@ top: -25px;
 /*-------------caption and type.js edit cursor------------------- */
 .captionText{
   color: white;
-  font-size: larger;
-  font-weight: 700;
+  font-size: x-large;
+  font-weight: 900;
   
 }
 .captionText{
@@ -467,8 +493,8 @@ animation-delay: 2.1s;
 }
 .captionText {
   color: white;
-  font-size: large;
-  font-weight: 700;
+  font-size: x-large;
+  font-weight: 900;
 }
 .typed-cursor{
   font-size: large;
@@ -688,7 +714,7 @@ animation-delay: 2.1s;
 
 
 #header{
-  height: 100vh;
+  height:100vh;
   /* background: url(../images/bg-lightb&w.jpg) top center no-repeat fixed; 
   background-size: cover;*/
   background-image: url(../images/bg-lightb&w.jpg);
@@ -1049,7 +1075,7 @@ left: -150%;
   border-bottom: 2px solid var(--ired);
 }
 .BData2{
-  width: 99%;
+  /* width: 99%; */
 
 }
 
