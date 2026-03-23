@@ -364,7 +364,7 @@ $(document).ready(function() {
                     short_Description:"Our extensive nozzle range made of high-quality stainless steel ...",
                     description: "Our extensive nozzle range made of high-quality stainless steel is flexible and can be adapted to various fire loads. It provides reliable fire protection at installation heights ranging from 0.35 m to 18 m and ensures the highest safety in any environment.",
                     image: "images/p_1.jpg",
-                    glb_3d_models:"../3DModels/P1.glb",
+                    glb_3d_models:"P1.glb",
                 },
                 {
                     id: 2,
@@ -373,7 +373,7 @@ $(document).ready(function() {
                     short_Description:"Our valve units, consisting of alarm valves and area valves, ...",
                     description: "Our valve units, consisting of alarm valves and area valves, are available as compact seat valves or as maintenance-friendly, motor-operated ball valves. This design enables easy and regular functional testing, particularly in critical applications, ensuring the highest operational safety.",
                     image: "images/p_2.jpg",
-                    glb_3d_models:"../3DModels/P2.glb",
+                    glb_3d_models:"P2.glb",
                 },
                 {
                     id: 3,
@@ -382,7 +382,7 @@ $(document).ready(function() {
                     short_Description:"Our power packs provide flexible supply solutions for different requirements, ...",
                     description: "Our power packs provide flexible supply solutions for different requirements. From complete units with tank and control cabinet to compact assemblies for tight spaces – available with electric, diesel, or compressed nitrogen drive. The Rail Power Pack GPP impresses with its gas-operated design, frost protection options, and easy maintenance in the installed state. The Rail Power Pack EPP, electrically operated, is ideal for applications with stable power supply and enables quick refilling after activation without pressure vessels.",
                     image: "images/p_3.jpg",
-                    glb_3d_models:"../3DModels/P3.glb",
+                    glb_3d_models:"P3.glb",
                 },
                 {
                     id: 4,
@@ -391,7 +391,7 @@ $(document).ready(function() {
                     short_Description:"Container solutions offer the advantage that all technology – from the tank and valve units ...",
                     description: "Container solutions offer the advantage that all technology – from the tank and valve units to the control system – is compactly and pre-installed in a protected space. This creates a plug-and-play solution that significantly simplifies and accelerates installation and commissioning. Additionally, the containers can be flexibly and custom-made to meet climatic or design requirements.",
                     image: "images/p_4.jpg",
-                    glb_3d_models:"../3DModels/P4.glb",
+                    glb_3d_models:"P4.glb",
                 },
                 {
                     id: 5,
@@ -400,7 +400,7 @@ $(document).ready(function() {
                     short_Description:"The innovative and water-saving AQUASYS Water Mist Gun offers an ...",
                     description: "The innovative and water-saving AQUASYS Water Mist Gun offers an effective solution for manual fire fighting and is often integrated into wall hydrants. It provides an ideal alternative to conventional low-pressure systems and has already proven successful in numerous applications in buildings and industry.",
                     image: "images/p_5.jpg",
-                    glb_3d_models:"../3DModels/P5.glb",
+                    glb_3d_models:"P5.glb",
                 },
                 {
                     id: 6,
@@ -409,7 +409,7 @@ $(document).ready(function() {
                     short_Description:"Our stainless steel piping and connection systems offer outstanding corrosion resistance ...",
                     description: "Our stainless steel piping and connection systems offer outstanding corrosion resistance and durability. These properties not only reduce maintenance costs, but also increase the reliability of our systems. Stainless steel is hygienic and resistant to chemical influences and harsh environmental conditions - ideal for use in sensitive areas such as the food industry and laboratories. With our stainless steel solutions, we guarantee reliable and low-maintenance technology that has been specially developed for demanding and hygienically critical applications.",
                     image: "images/p_6.jpg",
-                    glb_3d_models:"../3DModels/P6.glb",
+                    glb_3d_models:"P6.glb",
                 },
                 {
                     id: 7,
@@ -490,7 +490,8 @@ $row.on('click', '.view-detail', function() {
                         </div>
                         
                         
-                        <model-viewer src="${glb}" auto-rotate ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
+                        <model-viewer src="${glb}" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
+
 
                         
                         
