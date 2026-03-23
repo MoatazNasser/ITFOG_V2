@@ -1,4 +1,10 @@
 
+
+ 
+
+
+
+
 // start loading page
 window.onload = function() {
       document.getElementById("loader").style.display = "none";
@@ -11,40 +17,14 @@ $(document).ready(function(){
   });
 });
 
-// slide sections show and hide while scrolling
-
-  // دالة مراقبة عامة
-    function createObserver(sectionId) {
-      const section = document.getElementById(sectionId);
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            section.classList.add("showSec");
-          } else {
-            section.classList.remove("showSec"); // لإعادة الحركة عند الرجوع
-          }
-        });
-      }, { threshold: 0.2 });
-      observer.observe(section);
-    }
-
-    // استدعاء الدوال لكل سيكشن
-    createObserver("application");
-    createObserver("technology");
-    createObserver("products");
-    createObserver("aboutUs");
-    createObserver("news");
-    createObserver("contactUs");
- 
-
-
-
 
 // space from Top
 let headerOffset = $('#header').offset().top;
 let applicationOffset = $('#application').offset().top;
 
+
 let navColor = $('.navContainer').select(function () { 
+  
 });
 
 //nav show and hide , arrow Btn
@@ -130,20 +110,7 @@ $(document).ready(function () {
 });
 
 
-// type.js
-var typed = new Typed('#elementTypeJs', {
-      strings: ['"delivering innovative solutions for modern fire safety challenges."',
-         '"providing fast, precise, and safe fire protection with minimal water damage."',
-        '"ensuring maximum protection with minimal environmental impact."',
-        '"combining advanced engineering with reliable fire suppression results."',
-        '"setting new standards in fire safety efficiency and sustainability."'],
-      typeSpeed: 50,
-      backDelay: 2000,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|',
 
-    });
 
 // test parallax
 // حدد الصور التي تريد تطبيق البارالاكس عليها
@@ -275,7 +242,20 @@ $(document).ready(function() {
       checkWidth_4();
     });    
 
+// type.js
+var typed = new Typed('#elementTypeJs', {
+      strings: ['"delivering innovative solutions for modern fire safety challenges."',
+         '"providing fast, precise, and safe fire protection with minimal water damage."',
+        '"ensuring maximum protection with minimal environmental impact."',
+        '"combining advanced engineering with reliable fire suppression results."',
+        '"setting new standards in fire safety efficiency and sustainability."'],
+      typeSpeed: 50,
+      backDelay: 2000,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
 
+    });
 
 // App Data functions
 
@@ -349,60 +329,6 @@ $(document).on("click", function(e) {
   }
 });
 
-
-
-
-//-----------Download Btn in Apps -----------
-
-//---Tunnels downoald btn 
-// document.getElementById("TunnelsDownloadBrochure").addEventListener("click", function() {
-//       // رابط ملف الـ PDF
-//       const pdfUrl = "../pdfFiles/ITGOG_Tunnels_Brochure.pdf"; // ضع هنا مسار ملفك
-//       const link = document.createElement("a");
-//       link.href = pdfUrl;
-//       link.download = "ITGOG_Tunnels_Brochure.pdf"; // اسم الملف عند التحميل
-//       document.body.appendChild(link);
-//       link.click();
-//       document.body.removeChild(link);
-//     });
-
-// option 2 to download
-    // document.getElementById("TunnelsDownloadBrochure").addEventListener("click", function() {
-    //   // رابط ملف الـ PDF
-    //   const pdfUrl = "pdfFiles/ITGOG_Tunnels_Brochure.pdf"; // ضع هنا المسار الصحيح للملف
-    //   const link = document.createElement("a");
-    //   link.href = pdfUrl;
-    //   link.download = "ITGOG_Tunnels_Brochure.pdf"; // اسم الملف عند التحميل
-    //   document.body.appendChild(link);
-    //   link.click();
-    //   document.body.removeChild(link);
-    // });
-
-// //---Buildings downoald btn 
-// document.getElementById("BuildingsDownloadBrochure").addEventListener("click", function() {
-//       // رابط ملف الـ PDF
-//       const pdfUrl = "../pdfFiles/ITGOG_Buildings_Brochure.pdf"; // ضع هنا مسار ملفك
-//       const link = document.createElement("a");
-//       link.href = pdfUrl;
-//       link.download = "ITGOG_Buildings_Brochure.pdf"; // اسم الملف عند التحميل
-//       document.body.appendChild(link);
-//       link.click();
-//       document.body.removeChild(link);
-//     });
-// //---Industry downoald btn 
-// document.getElementById("IndustryDownloadBrochure").addEventListener("click", function() {
-//       // رابط ملف الـ PDF
-//       const pdfUrl = "../pdfFiles/ITGOG_Industry_Brochure.pdf"; // ضع هنا مسار ملفك
-//       const link = document.createElement("a");
-//       link.href = pdfUrl;
-//       link.download = "ITGOG_Industry_Brochure.pdf"; // اسم الملف عند التحميل
-//       document.body.appendChild(link);
-//       link.click();
-//       document.body.removeChild(link);
-//     });
-
-
-
 //Tec Data function 
 
 //change triangel images 
@@ -438,7 +364,7 @@ $(document).ready(function() {
                     short_Description:"Our extensive nozzle range made of high-quality stainless steel ...",
                     description: "Our extensive nozzle range made of high-quality stainless steel is flexible and can be adapted to various fire loads. It provides reliable fire protection at installation heights ranging from 0.35 m to 18 m and ensures the highest safety in any environment.",
                     image: "images/p_1.jpg",
-                    glb_3d_models:"https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
+                    glb_3d_models:"../3DModels/P1.glb",
                 },
                 {
                     id: 2,
@@ -447,7 +373,7 @@ $(document).ready(function() {
                     short_Description:"Our valve units, consisting of alarm valves and area valves, ...",
                     description: "Our valve units, consisting of alarm valves and area valves, are available as compact seat valves or as maintenance-friendly, motor-operated ball valves. This design enables easy and regular functional testing, particularly in critical applications, ensuring the highest operational safety.",
                     image: "images/p_2.jpg",
-                    glb_3d_models:"https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
+                    glb_3d_models:"../3DModels/P2.glb",
                 },
                 {
                     id: 3,
@@ -456,7 +382,7 @@ $(document).ready(function() {
                     short_Description:"Our power packs provide flexible supply solutions for different requirements, ...",
                     description: "Our power packs provide flexible supply solutions for different requirements. From complete units with tank and control cabinet to compact assemblies for tight spaces – available with electric, diesel, or compressed nitrogen drive. The Rail Power Pack GPP impresses with its gas-operated design, frost protection options, and easy maintenance in the installed state. The Rail Power Pack EPP, electrically operated, is ideal for applications with stable power supply and enables quick refilling after activation without pressure vessels.",
                     image: "images/p_3.jpg",
-                    glb_3d_models:"https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
+                    glb_3d_models:"../3DModels/P3.glb",
                 },
                 {
                     id: 4,
@@ -465,7 +391,7 @@ $(document).ready(function() {
                     short_Description:"Container solutions offer the advantage that all technology – from the tank and valve units ...",
                     description: "Container solutions offer the advantage that all technology – from the tank and valve units to the control system – is compactly and pre-installed in a protected space. This creates a plug-and-play solution that significantly simplifies and accelerates installation and commissioning. Additionally, the containers can be flexibly and custom-made to meet climatic or design requirements.",
                     image: "images/p_4.jpg",
-                    glb_3d_models:"https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
+                    glb_3d_models:"../3DModels/P4.glb",
                 },
                 {
                     id: 5,
@@ -474,7 +400,7 @@ $(document).ready(function() {
                     short_Description:"The innovative and water-saving AQUASYS Water Mist Gun offers an ...",
                     description: "The innovative and water-saving AQUASYS Water Mist Gun offers an effective solution for manual fire fighting and is often integrated into wall hydrants. It provides an ideal alternative to conventional low-pressure systems and has already proven successful in numerous applications in buildings and industry.",
                     image: "images/p_5.jpg",
-                    glb_3d_models:"https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
+                    glb_3d_models:"../3DModels/P5.glb",
                 },
                 {
                     id: 6,
@@ -483,7 +409,7 @@ $(document).ready(function() {
                     short_Description:"Our stainless steel piping and connection systems offer outstanding corrosion resistance ...",
                     description: "Our stainless steel piping and connection systems offer outstanding corrosion resistance and durability. These properties not only reduce maintenance costs, but also increase the reliability of our systems. Stainless steel is hygienic and resistant to chemical influences and harsh environmental conditions - ideal for use in sensitive areas such as the food industry and laboratories. With our stainless steel solutions, we guarantee reliable and low-maintenance technology that has been specially developed for demanding and hygienically critical applications.",
                     image: "images/p_6.jpg",
-                    glb_3d_models:"https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb",
+                    glb_3d_models:"../3DModels/P6.glb",
                 },
                 {
                     id: 7,
@@ -606,15 +532,15 @@ $('#productModal').on('shown.bs.modal', function () {
     const modelContainer = document.querySelector('#modelContainer');
     const rotateBtn = document.querySelector('#rotateBtn');
     const loadingOverlay = document.querySelector('#loadingOverlay');
-    // setTimeout(() => {
-    //             loadingOverlay.classList.add('hidden');
-    //         }, 500);
+    setTimeout(() => {
+                loadingOverlay.classList.add('hidden');
+            }, 500);
     if (modelViewer) {
         modelViewer.addEventListener('load', function() {
             console.log('Model Loading done!');
-            setTimeout(() => {
-                loadingOverlay.classList.add('hidden');
-            }, 500);
+            // setTimeout(() => {
+            //     loadingOverlay.classList.add('hidden');
+            // }, 500);
         });
 
         modelViewer.addEventListener('error', function(event) {
@@ -843,3 +769,31 @@ $(document).ready(function() {
           $('#newsModal').modal('show');
       });
       });
+
+
+
+
+// ---------this part destrois modal for Products and News i don't know why!!---- */
+
+    //   // دالة مراقبة عامة
+    // function createObserver(sectionId) {
+    //   const section = document.getElementById(sectionId);
+    //   const observer = new IntersectionObserver(entries => {
+    //     entries.forEach(entry => {
+    //       if (entry.isIntersecting) {
+    //         section.classList.add("showSec");
+    //       } else {
+    //         section.classList.remove("showSec"); // لإعادة الحركة عند الرجوع
+    //       }
+    //     });
+    //   }, { threshold: 0.2 });
+    //   observer.observe(section);
+    // }
+
+    // // استدعاء الدوال لكل سيكشن
+    // createObserver("application");
+    // createObserver("technology");
+    // createObserver("products");
+    // createObserver("aboutUs");
+    // createObserver("news");
+    // createObserver("contactUs");
