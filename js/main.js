@@ -485,14 +485,8 @@ $row.on('click', '.view-detail', function() {
                                 <div class="spinner"></div>
                                 <div class="loading-text">Loading 3d Model ...</div>
                             </div>
-                        </div>
-                        // to get the right glb modal-viewer drag here then copy the text 
-                        // https://modelviewer.dev/editor/
-                        
+                        </div>   
                         <model-viewer src="${glb}" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1"> </model-viewer>
-
-                        
-                        
                     </div>
                 </div>
             </div>
@@ -521,15 +515,15 @@ $('#productModal').on('shown.bs.modal', function () {
     const modelContainer = document.querySelector('#modelContainer');
     const rotateBtn = document.querySelector('#rotateBtn');
     const loadingOverlay = document.querySelector('#loadingOverlay');
-    setTimeout(() => {
-                loadingOverlay.classList.add('hidden');
-            }, 500);
+    // setTimeout(() => {
+    //             loadingOverlay.classList.add('hidden');
+    //         }, 500);
     if (modelViewer) {
         modelViewer.addEventListener('load', function() {
             console.log('Model Loading done!');
-            // setTimeout(() => {
-            //     loadingOverlay.classList.add('hidden');
-            // }, 500);
+             setTimeout(() => {
+                 loadingOverlay.classList.add('hidden');
+             }, 500);
         });
 
         modelViewer.addEventListener('error', function(event) {
