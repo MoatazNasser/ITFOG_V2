@@ -80,10 +80,10 @@ transform: translateX(0);
     }
 
     .spinner1 {
-      width: 60px;
-            height: 60px;
+      width: 80px;
+            height: 80px;
             /* border: 5px solid #f3f3f3; */
-            background-image: url(../images/circles_white.png);
+            background-image: url(../images/spinner.png);
             background-position: center center;
             background-size: cover;
             /* border-top: 5px solid var(--ired); */
@@ -97,7 +97,17 @@ transform: translateX(0);
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
+  .LoadingImg{
+    transform: scale(1);
+    opacity: 1;
+    animation: loadingimg 800ms linear 0ms infinite alternate;
+  }
+  @keyframes loadingimg {
+    from{transform: scale(1.02);
+    opacity: 1;}
+    to{transform: scale(1);
+    opacity: .2;}
+  }
     /* site Content*/
     #content {
       display: none;
@@ -283,7 +293,7 @@ top: -25px;
 }
 /* ------------logo animation-------- */
 .part3-a{
-  animation: rotCirclePart 1s ease-in-out 1 ,ro 20s ease-out 1s infinite ; 
+  animation: rotCirclePart 1s ease-in-out 1 ,ro 20s linear 1s infinite ; 
 }
 @keyframes rotCirclePart {
   from{
